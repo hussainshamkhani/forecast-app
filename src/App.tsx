@@ -5,9 +5,17 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
-
-
+const cityForm = document.querySelector('form') as HTMLFormElement;
   
+
+cityForm.addEventListener('submit', (e: Event) => {
+  e.preventDefault();
+
+  const cityInput = cityForm.elements.namedItem('city') as HTMLInputElement;
+  const city = cityInput.value.trim();
+  cityForm.reset();
+});
+
 
   return (
     <div className='container my-5 mx-auto'>
