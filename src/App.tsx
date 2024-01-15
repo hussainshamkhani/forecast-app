@@ -2,6 +2,7 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +13,7 @@ cityForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
   const cityInput = cityForm.elements.namedItem('city') as HTMLInputElement;
-  const city = cityInput.value.trim();
+  const city: string = cityInput.value.trim();
   cityForm.reset();
 });
 
